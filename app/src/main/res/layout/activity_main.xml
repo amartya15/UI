@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+   tools:context=".MainActivity"
+    android:background="@drawable/gradient_list"
+    android:id="@+id/layout">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="ROLL INPUT DATABASE"
+        android:layout_centerHorizontal="true"
+
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+
+       android:layout_weight="1">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+
+
+
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="20dp">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="CUSTOMER NAME :-"
+           android:textStyle="bold"
+           android:id="@+id/tvcname"
+
+
+           />
+       <EditText
+
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/tvcname"
+           android:hint="COSTOMER NAME"
+           android:gravity="start"
+       android:id="@+id/etcname"
+           android:layout_marginLeft="10dp"
+           android:background="@drawable/rounder_corner"
+           android:layout_weight="1"/>
+
+
+
+   </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="20dp">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="CODE :-"
+           android:textStyle="bold"
+           android:id="@+id/tvcode"
+
+           />
+
+       <Spinner
+
+           android:id="@+id/etcode"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="90dp"
+           android:layout_toRightOf="@+id/tvcode"
+           android:hint="CODE"
+           android:inputType="number"
+           android:background="@drawable/rounder_corner"
+           android:layout_weight="1"
+           android:entries="@array/Spinner_items"/>
+
+
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="20dp">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="RECIEVE DATE :-"
+           android:textStyle="bold"
+           android:id="@+id/tvrcvdate"
+
+           />
+       <Button
+
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/tvrcvdate"
+           android:hint="DATE"
+           android:id="@+id/etdate"
+           android:inputType="date"
+           android:layout_marginLeft="32dp"
+           android:background="@drawable/rounder_corner"
+           android:onClick="date"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/date"
+           />
+
+
+
+   </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp">
+
+               <TextView
+                   android:id="@+id/tvchalanno"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="CHALAN NO. :-"
+                   android:textStyle="bold"
+
+                   />
+
+               <EditText
+
+                   android:id="@+id/etchalanno"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="40dp"
+                   android:layout_toRightOf="@+id/tvchalanno"
+                   android:layout_weight="1"
+                   android:background="@drawable/rounder_corner"
+                   android:hint="CHAlAN NO."
+                   android:inputType="number" />
+
+
+           </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="20dp">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="CHALAN DATE :-"
+           android:textStyle="bold"
+           android:id="@+id/tvchalandate"
+
+           />
+       <EditText
+
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/tvcname"
+           android:hint="CHALAN DATE"
+           android:inputType="date"
+           android:id="@+id/etchalandate"
+           android:layout_marginLeft="30dp"
+           android:background="@drawable/rounder_corner"
+           android:layout_weight="1"/>
+
+
+
+   </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="20dp">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="DOCUMENT NO. :-"
+           android:textStyle="bold"
+           android:id="@+id/tvdocumentno"
+
+           />
+       <EditText
+
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/tvdocumentno"
+           android:hint="DOCUMENT NO."
+           android:id="@+id/etdocumentno"
+           android:inputType="number"
+           android:layout_marginLeft="19dp"
+           android:background="@drawable/rounder_corner"
+           android:layout_weight="1"/>
+
+
+
+   </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="20dp">
+
+       <TextView
+           android:id="@+id/tvrecievematerial"
+           android:layout_width="125dp"
+           android:layout_height="wrap_content"
+           android:text="RECEIVED MATERIAL :-"
+           android:textStyle="bold"
+
+           />
+       <EditText
+
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/tvcname"
+           android:hint="RECEIVED MATERIAL"
+           android:id="@+id/recievedmaterial"
+           android:layout_marginLeft="10dp"
+           android:gravity="center"
+           android:background="@drawable/rounder_corner"
+           android:layout_weight="1"/>
+
+
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+
+       android:padding="20dp">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="ROLL MATERIAL :-"
+           android:textStyle="bold"
+           android:id="@+id/tvrollmaterial"
+
+           />
+
+       <Button
+           android:id="@+id/camera_button"
+           android:layout_width="100dp"
+           android:layout_height="50dp"
+           android:layout_marginLeft="20dp"
+
+
+           android:onClick="camera"
+           android:text="Camera"
+           android:background="@drawable/rounder_corner"/>
+
+       <!-- add ImageView to display the captured image-->
+       <ImageView
+           android:id="@+id/click_image"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:layout_marginBottom="10dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" QUANTITY :-"
+            android:textStyle="bold"
+            android:id="@+id/tvquantity"
+
+            />
+        <EditText
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvcname"
+            android:hint=" QUANTITY"
+            android:id="@+id/etquantity"
+            android:layout_marginLeft="60dp"
+            android:inputType="number"
+            android:background="@drawable/rounder_corner"
+            android:layout_weight="1"/>
+
+
+
+    </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="COST. PO NO. :-"
+                   android:textStyle="bold"
+                   android:id="@+id/tvcopono"
+
+                   />
+               <EditText
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/tvcname"
+                   android:hint="CUSTOMER NO."
+                   android:id="@+id/etcopono"
+                   android:layout_marginLeft="40dp"
+                   android:inputType="number"
+                   android:background="@drawable/rounder_corner"
+                   android:layout_weight="1"/>
+
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="ROLL PACK TYPE :-"
+                   android:textStyle="bold"
+                   android:id="@+id/tvrolltype"
+
+                   />
+               <EditText
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/tvcname"
+                   android:hint="ROLL PACK TYPE"
+                   android:id="@+id/etrolltype"
+                   android:layout_marginLeft="20dp"
+                   android:inputType="number"
+                   android:background="@drawable/rounder_corner"
+                   android:layout_weight="1"/>
+
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp">
+
+               <TextView
+                   android:id="@+id/tvtotalweight"
+                   android:layout_width="127dp"
+                   android:layout_height="wrap_content"
+                   android:text="TOTAL ROLL WEIGHT :-"
+                   android:textStyle="bold"
+
+                   />
+               <EditText
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/tvcname"
+                   android:hint="TOTAL ROLL WEIGHT"
+                   android:id="@+id/ettotalweight"
+                   android:layout_marginLeft="19dp"
+                   android:inputType="numberDecimal"
+                   android:background="@drawable/rounder_corner"
+                   android:layout_weight="1"/>
+
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="ROLL VALUE :-"
+                   android:textStyle="bold"
+                   android:id="@+id/tvrollvalue"
+
+                   />
+               <EditText
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/tvcname"
+                   android:hint="ROLL VALUE"
+                   android:id="@+id/etrollvalue"
+                   android:layout_marginLeft="50dp"
+                   android:inputType="number"
+                   android:background="@drawable/rounder_corner"
+                   android:layout_weight="1"/>
+
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="TRANSPORTER :-"
+                   android:textStyle="bold"
+                   android:id="@+id/tvtransporter"
+
+                   />
+               <EditText
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/tvcname"
+                   android:hint="TRANSPORTER"
+                   android:id="@+id/ettransporter"
+                   android:layout_marginLeft="30dp"
+                   android:inputType="number"
+                   android:background="@drawable/rounder_corner"
+                   android:layout_weight="1"/>
+
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="LR NO. :-"
+                   android:textStyle="bold"
+                   android:id="@+id/tvlrno"
+
+                   />
+               <EditText
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/tvcname"
+                   android:hint="LR NO."
+                   android:id="@+id/etlrno"
+                   android:layout_marginLeft="80dp"
+                   android:inputType="number"
+                   android:background="@drawable/rounder_corner"
+                   android:layout_weight="1"/>
+
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="DATE :-"
+                   android:textStyle="bold"
+                   android:id="@+id/tvnewdate"
+
+                   />
+               <Button
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/tvcname"
+                   android:hint="DATE"
+                   android:id="@+id/etnewdate"
+                   android:layout_marginLeft="85dp"
+                   android:inputType="number"
+                   android:onClick="newdate"
+                   android:background="@drawable/rounder_corner"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/newdate"
+                   />
+
+
+
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="20dp">
+
+               <Button
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/tvcname"
+                   android:hint="SUBMIT IF DONE"
+                   android:layout_weight="1"
+
+
+                   android:inputType="number"
+                   android:onClick="submit"
+                   android:background="@drawable/rounder_corner"
+
+                   />
+
+
+
+
+           </LinearLayout>
+
+
+
+
+
+
+
+
+       </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
